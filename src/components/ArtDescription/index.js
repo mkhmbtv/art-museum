@@ -14,7 +14,7 @@ const ArtDescription = ({ gallery }) => {
         <a href={art.url}>{art.title}</a>
         <div className='artwork-images'>
           {art.images.map(image => 
-            <img src={image.baseimageurl} alt=''/>
+            <img key={image.imageid} src={image.baseimageurl} alt=''/>
           )}
         </div>
         <ul>
