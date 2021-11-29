@@ -1,12 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import './ArtImageTile.css';
 
-const ArtImageTile = ({ art, galleryId }) => {
-  
+const ArtImageTile = ({ art }) => {
+  const { galleryId } = useParams();
+
   return (
     <Link to={`/galleries/${galleryId}/art/${art.id}`}>
-      <img src={art.primaryimageurl} alt="artwork"/>
+      <img className="artwork" src={art.primaryimageurl} alt="artwork"/>
     </Link>
-  )
+  );
 };
 
 export default ArtImageTile;

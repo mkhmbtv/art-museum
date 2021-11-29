@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
+import './ArtDescription.css';
 
 const ArtDescription = ({ gallery }) => {
   const { artId } = useParams();
@@ -17,9 +18,15 @@ const ArtDescription = ({ gallery }) => {
           )}
         </div>
         <ul>
-          <li>{art.description}</li>
-          <li>{art.technique}</li>
-          <li>{art.creditline}</li>
+          <li><strong>Description: </strong>
+            {art.description}
+          </li>
+          <li><strong>Technique: </strong>
+            {art.technique}
+          </li>
+          <li><strong>Credit: </strong>
+            {art.creditline}
+          </li>
         </ul>
       </div>
     </div>

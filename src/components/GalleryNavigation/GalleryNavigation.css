@@ -1,3 +1,14 @@
 .active {
   font-weight: bold;
 }
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  row-gap: 10px;
+}
+
+.nav-links a {
+  padding: 3px 5px;
+}
